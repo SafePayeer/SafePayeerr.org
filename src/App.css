@@ -1,6 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 html{
   scroll-behavior: smooth;
 }
+.still-button{
+  border: none;
+  font-size: 32px;
+  background-color: transparent;
+
+}
+:root {
+	--mainColor: #29335c;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+	--textColor: #eee;
+}
+
+
+nav  a {
+	margin: 0 1.5rem;
+	color: var(--textColor);
+  opacity: .7;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--textColor);
+  opacity: 2;
+}
+
+header .nav-btn {
+
+	 
+	visibility: hidden;
+	opacity: 0;
+
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+
+
+
+
+
+.but{
+ margin-left: 90%;
+ margin-top: 15px;
+ background-color: transparent;
+ border: none;
+}
+
+ body {
+ min-height: 100vh;
+
+ }
+ .navigation {
+display: none;
+   }
+
 .App {
   text-align: center;
 }
@@ -49,15 +110,8 @@ background-color: transparent;
   height: 7vw;
   pointer-events: none;
   cursor: pointer;
-
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo2 {
-    animation: App-logo-float2 infinite 3s ease-in-out;
-  cursor: pointer;
-    
-  }
+  margin-right: 80px;
+  animation: App-logo-float2 infinite 3s ease-in-out;
 }
 @keyframes App-logo-float2 {
   0% {
@@ -75,11 +129,11 @@ background-color: transparent;
   background-color: black;
   height: 10vw;
   justify-content: space-around;
-  align-items: center;
+  align-items: center;  
 }
 .nav ul{
   display: flex;
-
+ 
 }
 .nav ul li a {
   cursor: pointer;
@@ -88,6 +142,7 @@ background-color: transparent;
   display: flex;
   margin-right: 6vw;
   opacity: .6;
+ 
 }
 .nav ul li a:hover{
   color: white;
@@ -141,15 +196,20 @@ q{
   color: red;
   font-size: 3vw;
 }
+.Quotes code{
+  color: rgb(0, 140, 255);
+  position: relative;
+  margin-top: -80px;
+}
 @keyframes quote-animate{
   from{
     top: -10vh;
-    opacity: .5;
+    opacity: .9;
     box-shadow: 0 0;
   }
   to{
     top: 0.3vh;
-    opacity: .9;
+    opacity: 1;
     box-shadow: .3vw .3vw gray;
   }
 }
@@ -158,6 +218,7 @@ q{
   justify-content: space-around;
   align-items: center;
   margin-top: 20vh;
+  height: inherit;
 }
 .head-quote{
   color: gray;
@@ -198,6 +259,12 @@ footer p{
   width: 400px;
   height: 40px;
 }
+/*fixed navbar*/
+.clickable{
+  display: none;
+}
+.fix-nav{display: none;}
+.head-2{display: none;}
 .email-color:hover{
   color: aqua;
   font-size: 22px;
@@ -523,7 +590,7 @@ animation: animage .3s linear infinite;
   position: fixed;
 
   margin-left: -2.6rem;
-  margin-top: 477px;
+  margin-top: 400px;
   background-color: transparent;
   border: .3vw solid rgb(20, 124, 143);
   cursor: pointer;
@@ -567,7 +634,7 @@ zoom: 1.1;
 position: relative;
 }
 .top-button:hover{
-  margin-top: 76vh;
+ 
   font-size: 2.7vw;
   background-color: transparent;  
 
@@ -602,6 +669,7 @@ position: relative;
   cursor: pointer;
   
 }
+.clickable{display: none;}
 #close-btn:hover{
   color: blue;
   font-size: 3.2vw;
@@ -763,7 +831,59 @@ footer{
 .white{
   color: white;
   font-size: 2rem;
+}/*
+.header-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+   
+  
+  color: white;
+  
 }
+.header-nav:hover{
+  margin: 0 0;
+}
+nav a{
+ font-size: 20px;
+color: white;
+text-decoration: none;
+opacity: .6;
+
+}
+nav a:hover{
+  color: white;
+  opacity: .9;
+}
+.header-nav  .nav-btn{
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  visibility: hidden;
+opacity: 0;
+
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* All  Devices .....  */
@@ -803,6 +923,7 @@ footer{
     
   }
 }
+
 @media screen and (max-width:820px){  /*here we go*/
   body{
    width:100%;
@@ -811,13 +932,341 @@ footer{
     height: 8vw;
     pointer-events: none;
     cursor: pointer;
+     margin-right: 70vw;
   
   }
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(black);
+    color: var(--textColor);
+    opacity: .7;
+    margin-left: -60px;
+  }
+  header .nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--textColor);
+ 
+    font-size: 1.8rem;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: absolute;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav   a {
+		font-size: 1.5rem;
+    
+	}
+}
+
+
+  .nav ul{
+    display: block;
+    height: 800px;
+    background-color: transparent;
+    color: white;
+   left: 25%;
+    width: 51.8%;
+    position: absolute;
+    top: 50px;
+    opacity: .9;
+    right: 0px;
+ transition: 1s;
+  }
   
+  .navbar {
+    background-color: #060b26;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  .menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+  }
+  
+
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+  }
+  
+  .nav-text a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .nav-text a:hover {
+    background-color: #1a83ff;
+  }
+  
+  .nav-menu-items {
+    width: 100%;
+  }
+  
+  .navbar-toggle {
+    background-color: #060b26;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    cursor: pointer;
+    justify-content: start;
+    align-items: center;
+  }
+  .navbar-toggle:active{
+    color: red;
+  }
+  
+  span {
+    margin-left: 16px;
+  }
+  .nav ul li{
+    margin-top: 40px;
+  }
+  .nav ul li a:hover{
+    opacity:2 ;
+  }
+
+    .navigation {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0px;
+      width: 120px;
+      height: 37px;
+      background: rgb(14, 7, 7);
+      box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      transition: height 0.5s, width 0.5s;
+      transition-delay: 0s, 0.75s;
+      overflow: visible;
+      color: white;
+     
+      
+      }
+
+      .navigation.active {
+      width: 300px;
+      height: 400px;
+      transition: width 0.5s, height 0.5s;
+      transition-delay: 0s, 0.75s;
+      }
+   
+
+   
+      .navigation.active .userBx {
+      width: calc(100% - 60px);
+      transition-delay: .01s;
+      }
+   
+
+   
+
+   
+
+   
+      .navigation .menuToggle {
+      position: relative;
+      color: white;
+      
+      width: 60px;
+      height: 60px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .navigation .menuToggle:hover{
+        opacity: 1;
+        color: white;
+      }
+      .navigation .menuToggle::before{
+          content: '';
+          position: absolute;
+          width: 32px;
+          height: 2px;
+          background: #d8d1d1;
+          transform: translateY(-10px);
+          box-shadow: 0 10px #555;
+          transition: 0.5s;
+      }
+   
+      .navigation .menuToggle::after{
+          content: '';
+          position: absolute;
+          width: 32px;
+          height: 2px;
+          background: #d8d1d1;
+          transform: translateY(10px);
+          transition: 0.5s;
+      }
+   
+      .navigation.active .menuToggle::before{
+          transform: translateY(0px) rotate(45deg);
+          box-shadow: 0 0 #555;
+      }
+      .navigation.active .menuToggle::after{
+          transform: translateY(0px) rotate(-45deg);
+      }
+   
+      .head{
+     color: white;
+          position: absolute;
+          width: 100%;
+          height: calc(100% - 60px);
+          margin-top: 60px;
+          padding: 20px;
+          padding-bottom: 30px;
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+          opacity: 2;
+      }
+
+      .head  a{
+          display: flex;
+          align-items: center;
+          margin-bottom: 30px;
+          margin: 20px 0;
+          font-size: 1em;
+          text-decoration: none;
+          color: #fff;
+          margin: 20px 0;
+          opacity: 2;
+
+          position: absolute;
+      }
+   
+      .head li a:hover{
+          color: #4e65ff;
+      }
+   
+      .menu li a .ion-icon{
+          font-size: 1.5em;
+      } 
+  /*.clickable{
+    
+     top: 1rem;
+     right: 2rem;
+     color: white;
+     cursor: pointer;
+     opacity: .7;
+     font-size: 21px;
+   }
+  .clickable{
+    
+   margin-top: 0;
+    margin-right: -15px;
+    color: white;
+    cursor: pointer;
+    opacity: .7;
+    font-size: 21px;
+  }
+  .head-2{
+    display: flex;
+    color: white;
+  background-color: #727272;
+width: 30rem; 
+ height: 400px;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-left: -460px;
+  
+  }
+  .head-2 li{
+    display: flex;
+    color: black;
+    position: absolute;
+  }
+  .clickable:nth-child(2){
+    display: none;
+  }
+  .clickable:hover{
+    opacity: .9;
+
+  }
+  .fix-nav{
+    display: flex;
+    color: white;
+    align-items: first baseline;
+    justify-content: center;
+  
+   
+  }
+  
+  .header-nav .nav-btn{
+    visibility: visible;
+    opacity: 1;
+  }
+  .header-nav nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: black;
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+  .header-nav .responsive_nav{
+    transform: none;
+  }
+  */
   @media (prefers-reduced-motion: no-preference) {
     .App-logo2 {
       animation: App-logo-float2 infinite 3s ease-in-out;
     cursor: pointer;
+    
       
     }
   }
@@ -1062,7 +1511,7 @@ footer{
     position: fixed;
   
     margin-left: -3.3rem;
-    margin-top: 1020px;
+    margin-top: 900px;
 
   }
   
@@ -1083,12 +1532,58 @@ footer{
   right: .5rem; 
   animation: change-color 2s linear infinite;
    
+  } /*main one to change
+  .nav{
+    display: flex;
+    background-color: black;
+    height: 10vw;
+    justify-content: space-around;
+    align-items: center;
+    
+  }*/
+
+  .intro{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .clickable:nth-child(2){
+    display: none;
+  }
+  .clickable:hover{
+    opacity: .9;
+
+  }
+
+ .clickable{
+   display: flex;
+   flex: 1;
+  margin-top: 0;
+   margin-right: -15px;
+   color: white;
+   cursor: pointer;
+   opacity: .7;
+   font-size: 21px;
+   margin-left: 310px;
+   
+ }
+  .nav ul li  {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50px;
+    opacity: .6;
   }
   .nav ul li a {
 
     margin-right: 6vw;
     opacity: .6;
-  display: none;
+    display: flex; /*main one*/
   }
   .message{
     background-color: rgb(63, 51, 109);
@@ -1112,10 +1607,10 @@ footer{
     opacity: .3;
    
     font-size: 25px;
-    
-  }
   
-}
+  }
+
+ 
 @media screen and (width <= 644px) {
   .input{
     background-color: rgb(63, 51, 109);
@@ -1369,7 +1864,7 @@ footer{
     font-size: 30px;
     
   }
-  
+ 
 }
 @media screen and (width:280px){
   .input{
@@ -1392,7 +1887,9 @@ footer{
 
 
   }
-  
+  .top-button{
+    display: none;
+  }
   .button-submit{
     
    
@@ -1427,6 +1924,9 @@ footer{
     font-size: 20px;
 
 
+  }
+  .top-button{
+    display: none;
   }
   
   .button-submit{
@@ -1480,12 +1980,8 @@ footer{
   }
 
 }
-@media screen and (width <= 916px) {
 
-  
-}
-
-
+ 
 
 
 
@@ -1498,3 +1994,4 @@ footer{
 
 /*other .....*/
 
+/* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/

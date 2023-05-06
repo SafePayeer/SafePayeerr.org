@@ -11,7 +11,7 @@ import {useCopyToClipboard} from 'usehooks-ts'   ;
 
 
 
- const code = 'Computynecompany@gmail.com ';
+ const code = 'safepayeerrrr@gmail.com ';
  /*addEventListener("click", function(){
 code.match('copied');
  })*/
@@ -28,6 +28,7 @@ const [value, copy ] = useCopyToClipboard();
          
 
 <div className="container-footer">
+    
 <footer> 
 <p>
 © Copyright 2023 SafePayeer.com Group, Inc.

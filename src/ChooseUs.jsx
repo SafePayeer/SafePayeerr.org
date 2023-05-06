@@ -3,8 +3,10 @@ import FirstImage from './high-payment.png';
 import SecondImage from './grow-with-us.png';
 import ThirdImage from './high-quality.png';
 
+
 function WhyChooseUs() {
     return ( <div id="Why-choose-us"> <div className="contain"> 
+
     <br />
                 <h1 className="head-quotes">Why choose us </h1>
         <div className="jobss">

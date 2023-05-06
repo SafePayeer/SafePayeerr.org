@@ -12,7 +12,6 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 function BackImg() {
     return ( <div className="back"> 
 <img className="background-image" src={Image} alt="" />
-<button className="top-button"><a href="#" className="font"><FontAwesomeIcon icon={faArrowUp} bounce /></a>  </button>
 
     </div> );//🔝
 }

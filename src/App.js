@@ -13,39 +13,61 @@ import FixedImage from './fixedImage';
 import ApplyOnTheJobWith from './Apply';
 import SendMessageToUs from './Send';
 import Footer from './footer';
+import { CSSProperties } from 'react';
+import ClipLoader from "react-spinners/ClipLoader";
+import { useState } from 'react';
+import { useEffect } from 'react';
+import intro from './intro.jpg';
+import Rotateimg from './rotateimg';
+
 
 function App() {
+const [loading , setloading ] = useState(false);
+useEffect(()=>{
+  setloading(false);
+  setTimeout(()=>{
+    setloading(false)
+  },[6000])
+});
   const state = useSelector((state) => state);
 
- /* console.log(state.account)*/
+  /* console.log(state.account)*/
 
   return (
     <div className="App">
+    {
+      loading ?
+Image={intro}
 
-      <Nav />
-      <BackImg />
-      <Quotes />    
-      <AvailableJobsInOurCompany />
-      <WhyChooseUs />
-      <FixedImage />
-      <ApplyOnTheJobWith />
-      <SendMessageToUs /><br /><br /><br /><br /><br /><br /><br /><br />
-      <img src={logo} className="App-logo" alt="logo" /> <br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <footer>
+    :
+    <div> 
+    <Nav />
+    <BackImg />
+    <Quotes />
+    <AvailableJobsInOurCompany />
+    <WhyChooseUs />
+    <FixedImage />
+    <ApplyOnTheJobWith />
+    <SendMessageToUs />
+    <Rotateimg />
+    <footer>
       <div className='footer'> <img src={logomean} className="App-logo4" alt="logo" />
-      
-   
-      <Footer/>
-      
-        
-    
-        
-  
 
 
-       
-   </div>  </footer>
-    </div>
+        <Footer />
+
+
+
+
+
+
+
+
+      </div>  </footer>
+  </div>
+    }
+
+</div>
   );
 }
 

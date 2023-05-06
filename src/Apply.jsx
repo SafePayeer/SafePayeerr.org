@@ -4,6 +4,9 @@ import telegram from './telgram4.png';
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 // My passwork 
 function ApplyOnTheJobWith() {
@@ -13,6 +16,8 @@ function ApplyOnTheJobWith() {
             },[])
     return (
          <div className="apply-with" id="Apply-on-a-job" >
+<button className="but" ><a href="#" className="still-button"><FontAwesomeIcon icon={faArrowUp}  /></a>  </button>
+
             <br /><br /><br /><br /><br /><br />
         <h1 className="header">Apply on the job with</h1>
         <br /><br /><br /><br /><br />
